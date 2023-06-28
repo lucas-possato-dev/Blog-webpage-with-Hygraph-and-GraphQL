@@ -68,6 +68,11 @@ export default function BlogPost({ post }) {
           <h6 className={styles.date}>{post.datePublished}</h6>
         </div>
       </div>
+      <h2>{post.title}</h2>
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: post.content.html }}
+      ></div>
     </main>
   );
 }
